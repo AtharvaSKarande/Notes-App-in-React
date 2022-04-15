@@ -21,11 +21,15 @@ function App() {
   //   }
   // }
 
+  const onNoteUpdate = () => {
+    console.log("@");
+  };
+
   return (
     <div className="App">
       <div className="notes-list">
         {Notes.map((item, index) => {
-          return <Note note={item} key={index} />;
+          return <Note note={item} onNoteUpdate={onNoteUpdate} key={index} />;
         })}
       </div>
     </div>
