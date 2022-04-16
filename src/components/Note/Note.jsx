@@ -2,7 +2,13 @@ import "./Note.css";
 
 const Note = (props) => {
   const noteTextUpdate = (event) => {
-    props.onNoteUpdate(event.currentTarget.textContent);
+    const newText = event.currentTarget.textContent;
+    if (newText === props.note.text) return;
+    const updatedNote = {
+      ...props.note,
+      text: newText || "",
+    };
+    props.onNoteUpdate(updatedNote);
   };
 
   return (
