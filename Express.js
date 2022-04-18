@@ -1,5 +1,7 @@
 /**
  * Express JS backend.
+ * To run ...>npm run startExpress
+ * 
  * packages installed :
  * nodemon -> Refresh on change in this file.
  * cors -> To allow everyone to access. (Not recomended for production)
@@ -7,29 +9,18 @@
  */
 
 const express = require('express')
+const cors = require('cors');
 const app = express();
 const port = 5000;
+const {notesRouter} = require("./api/v1/index")
 
-const cors = require('cors')
-app.use(cors())
+app.use(cors());
 
 app.get('/', (request, response) =>{
-    response.send("Hello World!")
-})
+    response.send("Hello World!");
+});
 
-app.get('/notes', (request, response) =>{
-    const notes = [{
-        text: "Google",
-        link: "https://google.com"
-    },{
-        text: "Microsoft",
-        link: "https://microsoft.com"
-    },]
-    
-    response.json({
-        notes
-    })
-})
+app.use("/notes",notesRouter);
 
 app.listen(port, () =>{
     console.log(`Express is running on http://localhost:${port}`);
