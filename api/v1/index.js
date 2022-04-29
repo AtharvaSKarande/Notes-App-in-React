@@ -75,7 +75,6 @@ notesRouter.put("/:id", (request, response) => {
 notesRouter.delete("/:id", (request, response) => {
   const noteId = request.params.id;
   noteModel.findByIdAndRemove(noteId, (error, deletedNote) => {
-    console.log(error, deletedNote);
     if (error) return console.log(error);
 
     if (!deletedNote) {

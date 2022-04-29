@@ -1,7 +1,11 @@
+import { useState } from "react";
 import "./Note.css";
 
 const Note = (props) => {
+  const [isFocused, setIsFocused] = useState(false);
+
   const noteTextUpdate = (event) => {
+    setIsFocused(false);
     const newText = event.currentTarget.textContent;
     if (newText === props.note.text) return;
     const updatedNote = {
@@ -11,11 +15,24 @@ const Note = (props) => {
     props.onNoteUpdate(updatedNote);
   };
 
+  const setFocusTrue = () => {
+    setIsFocused(true);
+  };
+
   return (
-    <div className="note">
+    <div className={isFocused ? "note note--focused" : "note"}>
+      <button
+        type="button"
+        className="btn-close"
+        onClick={() => {
+          props.onNoteDelete(props.note);
+        }}
+        aria-label="Close"
+      ></button>
       <div
         className="note_text"
         onBlur={noteTextUpdate}
+        onFocus={setFocusTrue}
         contentEditable
         suppressContentEditableWarning
       >
