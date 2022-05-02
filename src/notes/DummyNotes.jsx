@@ -1,14 +1,41 @@
 const dummyNotes = [
-  { _id: "1", text: "Text_1", link: "Link_1" },
-  { _id: "2", text: "Text_2", link: "Link_2" },
-  { _id: "3", text: "Text_3", link: "Link_3" },
-  { _id: "4", text: "Text_4", link: "Link_4" },
-  { _id: "5", text: "Text_5", link: "Link_5" },
-  { _id: "6", text: "Text_6", link: "Link_6" },
-  { _id: "7", text: "Text_7", link: "Link_7" },
-  { _id: "8", text: "Text_8", link: "Link_8" },
-  { _id: "9", text: "Text_9", link: "Link_9" },
-  { _id: "10", text: "Text_10", link: "Link_10" },
+  {
+    _id: "SAMPLE_NOTE_ID_1",
+    text: "These are the sample notes.",
+    link: "Link_1",
+  },
+  {
+    _id: "SAMPLE_NOTE_ID_2",
+    text: "You can add a new note by clicking 'add notes' button.",
+    link: "Link_2",
+  },
+  {
+    _id: "SAMPLE_NOTE_ID_3",
+    text: "You can load sample notes clicking 'load notes' button.",
+    link: "Link_3",
+  },
+  {
+    _id: "SAMPLE_NOTE_ID_4",
+    text: "To update note, just click on the text of note and start typing.",
+    link: "Link_3",
+  },
+  {
+    _id: "SAMPLE_NOTE_ID_5",
+    text:
+      "To delete a note, click '×' button on the top right corner of the note.",
+    link: "Link_4",
+  },
+  {
+    _id: "SAMPLE_NOTE_ID_6",
+    text:
+      "You can find the complete implementation with a proper backend in 'master' branch of this project.",
+    link: "Link_5",
+  },
+  {
+    _id: "SAMPLE_NOTE_ID_7",
+    text: "Created by, Atharva Sunil Karande.",
+    link: "Link_6",
+  },
 ];
 
 export default dummyNotes;
