@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import dummyNotes from "./notes/DummyNotes";
 import Note from "./components/Note/Note.jsx";
+import logo_img from "./notes_logo.png";
 import { Button, Modal, FloatingLabel, Form } from "react-bootstrap";
 import "./App.css";
 
@@ -74,7 +75,7 @@ function App() {
       <nav className="navbar navbar-dark bg-dark Nav">
         <a className="navbar-brand" href="#">
           <img
-            src="../src/notes_logo.png"
+            src={logo_img}
             width="30"
             height="30"
             className="d-inline-block align-top"
