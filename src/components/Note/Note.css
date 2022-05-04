@@ -1,8 +1,8 @@
 .note {
-  background-color: #feff9c;
+  background-color: #7afcff;
   color: black;
-  height: 10em;
-  width: 10em;
+  height: 12em;
+  width: 12em;
   margin: 1em;
   padding: 1em;
   text-decoration: none;
@@ -10,13 +10,14 @@
   position: relative;
   flex-direction: column;
   transform: rotate(-6deg);
-  transition: all ease 0.25s;
+  transition: all ease 0.2s;
+  border-radius: 5px;
   box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px,
     rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 }
 
 .note:nth-child(even) {
-  background-color: #7afcff;
+  background-color: #feff9c;
   transform: rotate(4deg);
   top: 5px;
 }
@@ -29,7 +30,7 @@
 
 .note:hover,
 .note.note--focused {
-  transform: scale(1.5);
+  transform: scale(1.35);
   z-index: 5;
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
